@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+body {
+    padding-top: 120px;
+}
+
+/* TITULO PERSONALIZADO */
+.topo-site {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logo-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #ff2a2a;
+    letter-spacing: 4px;
+
+    text-shadow: 0 0 10px red, 0 0 25px darkred;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu li {
+    border: 1px solid #ff2a2a;
+    padding: 6px 12px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-family: 'Merriweather', serif;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background-color: #ff2a2a;
+}
+
+.menu a:hover {
+    color: black;
+}
+
+
+ /* TITULO PROMOÇÕES CENTRALIZADO */
+ .titulo-pagina {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.titulo-pagina h2 {
+    font-family: 'Merriweather', serif; /* mesma do menu */
+    font-size: 28px;
+    color: white;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 8px red;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* IMG */
+body {
+    font-family: Arial, sans-serif;
+    background: url("../bg4.png") no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+/* TOPO */
+.topo {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.topo h1 {
+    color: #ff2a2a;
+    font-size: 36px;
+    text-shadow: 0 0 10px red;
+}
+
+.topo p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* GRID DE PRODUTOS */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    display: flex;
+    gap: 15px; /* espaço entre imagem e conteúdo */
+
+    position: relative;
+
+    background: radial-gradient(circle at top, #2a0000, #000);
+    border: 1px solid #ff2a2a;
+
+    padding: 15px;
+    align-items: center;
+
+    box-shadow: 0 0 15px red;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px red, 0 0 50px darkred;
+}
+
+/* IMAGEM */
+.card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+/* TEXTO */
+.card h2 {
+    color: #ff4d4d;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 13px;
+}
+
+/* PREÇO */
+.preco del {
+    color: gray;
+    font-size: 13px;
+}
+
+.preco span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* SELO */
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: red;
+    color: white;
+
+    font-size: 10px;
+    padding: 4px 8px;
+    font-weight: bold;
+}
+
+/* PRODUTO D&D ESGOTADO */
+.esgotado {
+    position: relative;
+}
+
+/* FAIXA ESGOTADO */
+.tag-esgotado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+
+    background: rgba(0, 0, 0, 0.8);
+    color: red;
+
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+
+    border: 1px solid red;
+    box-shadow: 0 0 10px red;
+
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 80px;
+    }
+
+    .logo-titulo {
+        font-size: 28px;
+    }
+
+    .titulo-pagina h2 {
+        font-size: 22px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* GRID vira 1 coluna */
+    .produtos {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* CARD ajustado */
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 20px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        margin: 0 0 10px 0;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .preco span {
+        font-size: 16px;
+    }
+
+    /* TAGS não ficarem bugadas */
+    .tag {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .tag-esgotado {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+}

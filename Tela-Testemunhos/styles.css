@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+
+/* RESET */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* SEÇÃO */
+.Secao-Testemunho {
+    background-image: url('planoDeFundo.png');    
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+/* TÍTULO */
+.logo-titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5rem;
+    color: #ff141f;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titulo-pagina {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+/* MENU MOBILE */
+#menu-check {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #ff141f;
+    margin: 5px 0;
+}
+
+.menu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+}
+
+#menu-check:checked ~ ul {
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 12px;
+}
+
+/* CONTAINER */
+.container-testemunhos {
+    width: 95%;
+    padding: 20px;
+}
+
+/* TESTEMUNHO (EMPILHADO) */
+.linha-testemunho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* TEXTO */
+.caixa-texto-depoimento {
+    width: 100%;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 15px;
+    border-bottom: 3px solid #ff141f;
+    border-radius: 5px;
+}
+
+.caixa-texto-depoimento p {
+    font-size: 0.9rem;
+}
+
+.aspas {
+    font-size: 2rem;
+    color: #ff141f;
+}
+
+/* PERFIL */
+.perfil-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.perfil-lateral img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ff141f;
+}
+
+.perfil-lateral h3 {
+    font-size: 1rem;
+}
+
+.cargo-texto {
+    font-size: 0.75rem;
+}
+
+/* BOTÃO */
+.botao-enviar-testemunho {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ff141f;
+    background: transparent;
+    color: white;
+}

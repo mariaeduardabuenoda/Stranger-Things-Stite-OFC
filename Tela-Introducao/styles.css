@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.Secao-Introducao {
+    background-image: url('Foto07.png');    
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+/* Título Stranger Things */
+.logo-titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #ff141f;
+    text-shadow: 0 0 10px #820202, 0 0 20px #8b0000;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-align: center; 
+    width: 100%;
+}
+
+/* Menu de Navegação */
+.menu ul {
+    list-style: none;
+    padding: 10px 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(139, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+    margin: 30px 0;
+    object-fit: cover;
+}
+
+.nome-personagem {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Texto de Descrição */
+p {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-left: 3px solid #ff0000;
+}
+
+/* Botão Estilizado */
+.botao-explorar {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0000;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px #ff0000;
+    transition: 0.4s;
+    margin-top: 20px;
+}
+
+.botao-explorar:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+/* Rodapé com a Imagem do Grupo */
+.titulo-sobre {
+    margin-top: 50px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.moldura-grupo {
+    border: 2px solid #333;
+    padding: 5px;
+    background: #111;
+    margin-bottom: 40px;
+}
+
+.foto-grupo {
+    max-width: 500px;
+    display: block;
+    opacity: 0.8;
+}
+
+/*  Esconde o checkbox e o ícone no desktop */
+#menu-check, .menu-icon{
+    display: none;
+}
+
+
+/* Configuracoes para telas pequenas  menu Hanburger*/
+@media(max-width : 768px){
+
+    .logo-titulo{
+        font-size: 2rem;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    p{
+        width: 90%;
+        font-size:  0.85rem;
+    }
+
+    .foto-perfil{
+        width: 150px;
+        height: 150px;
+    }
+
+
+    @media(max-width : 768px){
+
+        .menu-icon{
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+        }
+    
+        .menu-icon span{
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #9a0d14;
+            margin: 5px 0;
+            box-shadow: 0 0 5px #ff141f;
+            transition: 0.3s;
+        }
+
+        .menu ul{
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100px;
+            background-color: rgba(0, 0, 0, 0.9);
+            width:  100%;
+            left: 0;
+            text-align: center;
+            border-bottom: 2px solid #a40a12;
+        }
+
+    }
+    
+    #menu-check:checked ~ ul{
+        display: flex;
+
+    }
+
+   
+
+/* ============================================================
+    CELULARES GRANDES (Até 768px)
+ 
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Ajuste do Menu Hambúrguer */
+    .menu-icon {
+        display: block; 
+        cursor: pointer;
+    }
+
+    .menu ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border-bottom: 2px solid #ff000d;
+        z-index: 10;
+        padding: 20px 0;
+    }
+
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    .logo-titulo {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .nome-personagem {
+        font-size: 1.8rem;
+    }
+
+    p {
+        width: 90%; 
+        font-size: 0.9rem;
+    }
+
+    .foto-grupo {
+        width: 95%; 
+    }
+}
+
+}

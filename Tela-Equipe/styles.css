@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.Secao-Perfil-Equipe {
+    background-image: url('planoDeFundo.png');    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.titulo-pagina{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color:#ffb4b4 ;
+    margin: 40px 0;
+    text-align: center;
+}
+
+
+.grid-equipe{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+.perfil-card{
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.perfil-card:hover{
+    border-color: #ff141f;
+    box-shadow: 0 0 15px rgba(255, 20, 31, 0.4);
+}
+
+.foto-moldura img{
+    width: 100%;
+    height: auto;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.perfil-card h3{
+    margin: 10px o 5px 0;
+    font-size: 1.4rem;
+
+}
+
+.cargo{
+    color:#ff141f;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.perfil-card p {
+    background: transparent;
+    border-left: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+/* Barra de ícones sociais no fundo do card */
+.icones-redes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+.imagem-final img {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    opacity: 0.8;
+}
+
+.logo-titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #ff141f;
+    text-shadow: 0 0 10px #820202, 0 0 20px #8b0000;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 10px 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(139, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+
+p {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-left: 3px solid #ff0000;
+    text-align: center;
+}
+
+ .perfil-card{
+    
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-left: 3px solid #ff0000;
+    text-align: center;
+
+ }
+
+ 
+
+/* Responsividade */
+#menu-check, .menu-icon {
+    display: none;
+}
+
+/*Menu Hamburger*/
+@media(max-width: 768px) {
+    .logo-titulo { font-size: 2rem; }
+    
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #ff000d;
+        margin: 5px 0;
+        box-shadow: 0 0 5px #ff141f;
+        transition: 0.3s;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        left: 0;
+        text-align: center;
+        border-bottom: 2px solid #ff000d;
+        z-index: 10;
+    }
+
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    p { width: 90%; }
+
+  
+
+
+
+}
+
+
+/* ============================================================
+    CELULARES GRANDES (Até 768px) 
+   ============================================================ */
+   @media (max-width: 768px) {
+    .logo-titulo {
+        font-size: 2.2rem;
+    }
+
+    .menu ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 2px solid #ff141f;
+    }
+
+    #menu-check:checked ~ ul {
+        display: flex; 
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    .grid-equipe{
+        grid-template-columns: 1fr;
+    }
+
+    
+}

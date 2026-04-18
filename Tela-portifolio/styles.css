@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* SEÇÃO PRINCIPAL */
+.Secao-Portifolio {
+    background-image: url('planoDeFundo.png');    
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+/* GRID PORTFÓLIO */
+.container-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* CARDS */
+.item-projeto {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ff141f;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.item-projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff141f;
+}
+
+.item-projeto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TÍTULO */
+.logo-titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #ff141f;
+    text-shadow: 0 0 10px #820202, 0 0 20px #8b0000;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+/* MENU DESKTOP */
+.menu ul {
+    list-style: none;
+    padding: 10px 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(139, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+/* MENU HAMBURGER */
+#menu-check {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/* =========================
+   📱 TABLET (até 1100px)
+   ========================= */
+@media (max-width: 1100px) {
+
+    .container-portfolio {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .logo-titulo {
+        font-size: 2rem;
+    }
+
+    /* MOSTRAR BOTÃO */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        width: 30px;
+        height: 3px;
+        background: #ff141f;
+        margin: 4px 0;
+    }
+
+    /* ESCONDER MENU */
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: center;
+    }
+
+    /* MOSTRAR AO CLICAR */
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    .menu ul li a {
+        padding: 15px;
+        display: block;
+    }
+}
+
+/* =========================
+   📱 CELULAR (até 480px)
+   ========================= */
+@media (max-width: 480px) {
+
+    .logo-titulo {
+        font-size: 1.4rem;
+    }
+
+    .item-projeto img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .item-projeto {
+        padding: 15px;
+    }
+}

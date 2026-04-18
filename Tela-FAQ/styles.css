@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.Secao-Faq {
+    background-image: url('planoDeFundo.png');    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.logo-titulo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #ff141f;
+    text-shadow: 0 0 10px #820202, 0 0 20px #8b0000;
+    margin-top: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 10px 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(139, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+
+p {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-left: 3px solid #ff0000;
+    text-align: center;
+}
+
+.pergunta01, .pergunta02, .pergunta03, .pergunta04, .pergunta05 {
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+details {
+    background: rgba(0, 0, 0, 0.7);
+    border-left: 3px solid #ff0000;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+    outline: none;
+}
+
+details p {
+    background: transparent; 
+    border-left: none;       
+    padding: 15px;
+    text-align: center;        
+}
+
+
+/* Responsividade */
+#menu-check, .menu-icon {
+    display: none;
+}
+
+/* ============================================================
+   FOCO EXCLUSIVO: CELULARES (Mobile First)
+   ============================================================ */
+
+   @media (max-width: 1100px) {
+    
+    .logo-titulo {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .menu-icon {
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute; 
+        top: 25px;
+        right: 20px; 
+        z-index: 1100; 
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ff141f; 
+        border-radius: 2px;
+        box-shadow: 0 0 8px #ff0000; 
+        transition: 0.3s;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.98);
+        border-bottom: 3px solid #ff141f;
+        z-index: 1000;
+        max-height: 60vh; 
+        overflow-y: auto;
+    }
+
+    #menu-check:checked ~ ul {
+        display: flex;
+    }
+
+    .menu ul li a {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+    }
+
+    .conteudo-principal {
+        width: 95%;
+    }
+
+    
+
+    
+}

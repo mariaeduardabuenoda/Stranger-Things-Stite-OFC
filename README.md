@@ -9,8 +9,9 @@ Estilização e design com CSS
 Interface simples, intuitiva e responsiva
 
 *🛠️ Tecnologias Utilizadas
-HTML5
-CSS3
+HTML5 , 
+CSS3 ,
+FIGMA https://www.figma.com/design/7SC57tQ5Eju8DVdTV4eyYE/Projeto-Web?node-id=13-34&t=28n9ez0J4JR0K8db-1
 
 *👥 Colaboração
 Projeto desenvolvido em parceria com:

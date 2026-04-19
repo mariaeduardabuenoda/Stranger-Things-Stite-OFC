@@ -1,4 +1,4 @@
-*🎬 Site Stranger Things
+*🎬 SITE STRANGER THINGS
 Este projeto consiste em um site inspirado na série Stranger Things, desenvolvido como parte da disciplina de Programação Web.
 O objetivo principal foi aplicar, na prática, conceitos fundamentais de desenvolvimento front-end, utilizando HTML e CSS para criar uma interface visualmente atrativa e organizada, baseada na identidade da série.
 

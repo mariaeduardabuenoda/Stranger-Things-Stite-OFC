@@ -14,7 +14,7 @@ Interface simples, intuitiva e responsiva
 ***
 - *HTML5* , 
 - *CSS3* ,
-- *FIGMA* https://www.figma.com/design/7SC57tQ5Eju8DVdTV4eyYE/Projeto-Web?node-id=13-34&t=28n9ez0J4JR0K8db-1
+- *FIGMA* [Acesse o designe do site](https://www.figma.com/design/7SC57tQ5Eju8DVdTV4eyYE/Projeto-Web?node-id=13-34&t=28n9ez0J4JR0K8db-1)
 
 ## 👥 Colaboração
 ***
